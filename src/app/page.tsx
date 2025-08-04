@@ -17,7 +17,11 @@ const useLazyLoad = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setLoadedSections((prev: Set<string>) => new Set([...prev, elementId]));
+            setLoadedSections((prev: Set<string>) => {
+              const newSet = new Set(prev);
+              newSet.add(elementId);
+              return newSet;
+            });
             setLoadingIndicator(true);
             setTimeout(() => setLoadingIndicator(false), 1000);
             observer.unobserve(entry.target);

@@ -4,39 +4,9 @@ import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
 
-interface ContactSectionProps {
-  isLoaded: boolean;
-  observeElement: (element: HTMLElement, sectionId: string) => void;
-}
-
-export default function ContactSection({ isLoaded, observeElement }: ContactSectionProps) {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (sectionRef.current) {
-      observeElement(sectionRef.current, 'contact');
-    }
-  }, [observeElement]);
-
-  if (!isLoaded) {
-    return (
-      <section ref={sectionRef} id="contact" className="py-20 bg-primary-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <div className="h-8 bg-white/20 rounded w-64 mx-auto mb-4 animate-pulse"></div>
-            <div className="h-4 bg-white/20 rounded w-96 mx-auto animate-pulse"></div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-white/10 rounded-lg p-6 h-64 animate-pulse"></div>
-            <div className="bg-white/10 rounded-lg p-6 h-64 animate-pulse"></div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
+export default function ContactSection() {
   return (
-    <section ref={sectionRef} id="contact" className="py-20 bg-primary-600 text-white">
+    <section id="contact" className="py-20 bg-primary-600 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
