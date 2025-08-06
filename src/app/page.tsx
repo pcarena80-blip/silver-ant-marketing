@@ -102,10 +102,19 @@ export default function Home() {
                     <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
                     <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
                   </div>
-                  <div className="text-white font-bold text-lg">sam</div>
-                  <div className="text-gray-300 text-xs tracking-wider">SILVER ANT</div>
-                  <div className="text-gray-300 text-xs tracking-wider">MARKETING</div>
-                </div>
+                  <div className="flex items-center gap-3">
+  <img
+    src="/header-light-logo-sam.webp"
+    alt="Silver Ant Marketing Logo"
+    className="w-12 h-12 object-contain"
+  />
+  <div>
+    <div className="text-white font-bold text-lg">sam</div>
+    <div className="text-gray-300 text-xs tracking-wider">SILVER ANT</div>
+    <div className="text-gray-300 text-xs tracking-wider">MARKETING</div>
+  </div>
+</div>
+
               </div>
             </div>
             
