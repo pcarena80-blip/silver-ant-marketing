@@ -214,38 +214,39 @@ export default function Home() {
           </div>
 
           {/* Mobile Menu */}
-          {isMenuOpen && (
-            <div className="lg:hidden border-t border-gray-200 py-4">
-              <div className="space-y-4">
-                <div className="text-gray-700 font-medium cursor-pointer" onClick={() => handleScrollToSection('services')}>
-                  DIGITAL MARKETING +
-                </div>
-                <div className="text-gray-700 font-medium cursor-pointer">
-                  ABOUT US +
-                </div>
-                <div className="text-gray-700 font-medium cursor-pointer" onClick={() => handleScrollToSection('portfolio')}>
-                  PORTFOLIO
-                </div>
-                <div className="text-gray-700 font-medium cursor-pointer" onClick={() => handleScrollToSection('clients')}>
-                  CLIENTS
-                </div>
-                <div className="text-gray-700 font-medium cursor-pointer" onClick={() => handleScrollToSection('blog')}>
-                  BLOGS
-                </div>
-                <div className="text-gray-700 font-medium cursor-pointer" onClick={() => handleScrollToSection('contact')}>
-                  CONTACT US
-                </div>
-                <button 
-                  className="bg-red-600 text-white px-6 py-2 rounded-full font-medium"
-                  onClick={() => handleScrollToSection('contact')}
-                >
-                  Get a Free Proposal
-                </button>
-              </div>
-            </div>
-          )}
-        </div>
-      </nav>
+          {/* Mobile Menu */}
+{isMenuOpen && (
+  <div className="lg:hidden border-t border-gray-200 py-4">
+    <div className="space-y-4">
+      <div className="text-gray-700 font-medium cursor-pointer" onClick={() => handleScrollToSection('services')}>
+        DIGITAL MARKETING +
+      </div>
+      <div className="text-gray-700 font-medium cursor-pointer">
+        ABOUT US +
+      </div>
+      <div className="text-gray-700 font-medium cursor-pointer" onClick={() => handleScrollToSection('portfolio')}>
+        PORTFOLIO
+      </div>
+      <div className="text-gray-700 font-medium cursor-pointer" onClick={() => handleScrollToSection('clients')}>
+        CLIENTS
+      </div>
+      <div className="text-gray-700 font-medium cursor-pointer" onClick={() => handleScrollToSection('blog')}>
+        BLOGS
+      </div>
+      <div className="text-gray-700 font-medium cursor-pointer" onClick={() => handleScrollToSection('contact')}>
+        CONTACT US
+      </div>
+      <button 
+        className="bg-red-600 text-white px-6 py-2 rounded-full font-medium"
+        onClick={() => handleScrollToSection('contact')}
+      >
+        Get a Free Proposal
+      </button>
+    </div>
+  </div>
+)}
+</div>
+</nav>
 
       {/* Hero Section */}
       <section id="hero" className="py-16 lg:py-24 bg-gray-50">
