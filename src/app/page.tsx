@@ -44,9 +44,12 @@ export default function Home() {
   const { loadedSections, observeElement, loadingIndicator } = useLazyLoad();
 
   useEffect(() => {
-    // Observe sections for lazy loading
-    ['services', 'clients', 'seo-services', 'portfolio', 'reviews', 'blog', 'faq', 'contact', 'newsletter', 'footer'].forEach(observeElement);
-  }, []);
+    const sections = ['services', 'clients', 'seo-services', 'portfolio', 'reviews', 'blog', 'faq', 'contact', 'footer'];
+    const disconnects = sections.map(observeElement);
+    return () => {
+      disconnects.forEach((disconnect) => disconnect());
+    };
+  }, [observeElement]);
 
   const handleScrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -96,14 +99,8 @@ export default function Home() {
           <div className="flex justify-between items-center py-4">
             {/* Logo */}
             <div className="flex items-center">
-              <div className="w-16 h-16 bg-slate-800 rounded-lg flex items-center justify-center mr-4">
-                <div className="text-white">
-                  <div className="flex space-x-1 mb-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
-                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
-                  </div>
-                  <div className="flex items-center gap-3">
+              <div className="w-48 h-16 bg-slate-800 rounded-lg flex items-center justify-center mr-4">
+                <div className="flex items-center gap-3">
   <img
     src="https://silverantmarketing.com/wp-content/uploads/2023/10/sam-logo.png"
     alt="Silver Ant Marketing Logo"
@@ -214,7 +211,6 @@ export default function Home() {
             </button>
           </div>
 
-{/* Mobile Menu */}
 {/* Mobile Menu */}
 {isMenuOpen && (
   <div className="lg:hidden border-t border-gray-200 py-4">
@@ -708,7 +704,7 @@ export default function Home() {
                   <div className="font-semibold text-gray-800">Google</div>
                   <div className="flex items-center">
                     {[...Array(5)].map((_, i) => (
-                      <i key={i} className="bi bi-star text-yellow-400" />
+                      <i key={i} className="bi bi-star-fill text-yellow-400" />
                     ))}
                   </div>
                 </div>
@@ -736,7 +732,7 @@ export default function Home() {
                 </div>
                 <div className="flex items-center">
                   {[...Array(5)].map((_, i) => (
-                    <i key={i} className="bi bi-star text-yellow-400" />
+                    <i key={i} className="bi bi-star-fill text-yellow-400" />
                   ))}
                 </div>
               </motion.div>
@@ -1076,7 +1072,7 @@ export default function Home() {
       </section>
 
       {/* Contact Information Section */}
-      <section id="contact" className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-blue-600 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -1177,7 +1173,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
+      <footer id="footer" className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
@@ -1187,7 +1183,7 @@ export default function Home() {
               </p>
               <div className="text-gray-400 space-y-2">
                 <p>hello@silverantmarketing.com</p>
-                <p>+1 469-638-3300</p>
+                <p>+1 214-247-6882</p>
               </div>
             </div>
             
