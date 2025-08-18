@@ -104,7 +104,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-3">
   <img
-    src="/header-light-logo-sam.webp"
+    src="https://silverantmarketing.com/#"
     alt="Silver Ant Marketing Logo"
     className="w-12 h-12 object-contain"
   />
