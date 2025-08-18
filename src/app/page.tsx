@@ -213,8 +213,7 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Mobile Menu */}
-          {/* Mobile Menu */}
+{/* Mobile Menu */}
 {isMenuOpen && (
   <div className="lg:hidden border-t border-gray-200 py-4">
     <div className="space-y-4">
