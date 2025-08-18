@@ -215,6 +215,7 @@ export default function Home() {
           </div>
 
 {/* Mobile Menu */}
+{/* Mobile Menu */}
 {isMenuOpen && (
   <div className="lg:hidden border-t border-gray-200 py-4">
     <div className="space-y-4">
@@ -247,7 +248,6 @@ export default function Home() {
 )}
 </div>
 </nav>
-
       {/* Hero Section */}
       <section id="hero" className="py-16 lg:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
