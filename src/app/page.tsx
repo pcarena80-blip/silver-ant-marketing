@@ -88,6 +88,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {/* Navigation section continues... */}
 
       {/* Navigation */}
       <nav className="bg-white shadow-sm sticky top-0 z-50">
