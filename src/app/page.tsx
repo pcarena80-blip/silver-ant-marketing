@@ -104,7 +104,7 @@ export default function Home() {
                   </div>
                   <div className="flex items-center gap-3">
   <img
-    src="https://silverantmarketing.com/#"
+    src="https://silverantmarketing.com/wp-content/uploads/2023/10/sam-logo.png"
     alt="Silver Ant Marketing Logo"
     className="w-12 h-12 object-contain"
   />
@@ -1237,4 +1237,4 @@ export default function Home() {
       )}
     </div>
   );
-} 
+}
